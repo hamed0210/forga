@@ -48,6 +48,7 @@ export const sidenavIcons = [
 		name: 'Usuarios',
 	},
 ]
+export const menuTabDeafault = [{ name: 'Nuevos' }, { name: 'Consultas' }]
 
 export const menuTabCementerio = [
 	{

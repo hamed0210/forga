@@ -1,4 +1,4 @@
-.container {
+/* .container {
 	position: relative;
 	display: flex;
 	height: 25px;
@@ -15,18 +15,37 @@
 	height: 1px;
 	background-color: var(--color-primary);
 	opacity: 0.3;
-}
-
-/* .item,
-.name {
-	display: flex;
-	align-items: center;
-	height: 15px;
 } */
 
 .item {
+	display: flex;
 	margin-right: 20px;
+	cursor: pointer;
+}
+
+.icon,
+.icon svg,
+.name {
+	display: flex;
+	align-items: center;
+	height: 18px;
+	pointer-events: none;
+}
+
+.icon {
+	padding-right: 5px;
+}
+
+.icon path {
+	fill: var(--color-primary);
+}
+
+.name {
+	font-size: 14px;
+	color: var(--color-primary);
+}
+
+.name_default {
 	font-size: 13px;
 	color: var(--color-primary);
-	cursor: pointer;
 }
