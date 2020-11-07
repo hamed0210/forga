@@ -1,0 +1,31 @@
+.container {
+	position: fixed;
+	display: flex;
+	min-height: 100vh;
+	color: #f4f4f4;
+	background-color: #462b45;
+}
+
+.sidenav {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	height: 100vh;
+	padding-top: 70px;
+}
+
+.icons {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 55px;
+	height: 100vh;
+}
+
+.menu {
+	width: 100%;
+	list-style: none;
+}
