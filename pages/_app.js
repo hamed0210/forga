@@ -5,7 +5,6 @@ import '../global.css'
 import Header from '../components/Header/Header'
 import Sidenav from '../components/Sidenav/Sidenav'
 import Main from '../components/Main/Main'
-import '../components/AnimatedCSS/Sidenav.animated.css'
 
 function MyApp({ Component, pageProps }) {
 	return (

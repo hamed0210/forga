@@ -3,28 +3,31 @@ import Link from 'next/link'
 
 import Styles from './Sidenav_item.module.css'
 
-const Sidenav_item = ({ icons, names }) => {
+const Sidenav_item = ({ icons, names, selected }) => {
 	const links = names.toLowerCase()
 
-	const [selected, setSelected] = useState('sidenav_not_selected')
-	const [sidenavName, setSidenavName] = useState('')
-
 	const handleClick = (e) => {
-		// const item = e.target.parentNode.classList[0]
-		if (selected === 'sidenav_selected') return
+		const item = e.target.parentNode,
+			fatherContainer = e.target.parentNode.parentNode.childNodes
 
-		if (selected === 'sidenav_not_selected') {
-			setSelected('sidenav_selected')
-			setSidenavName('sidenav_item_name')
-		}
+		const coords = item.getBoundingClientRect()
+		selected(coords)
+
+		if (item.classList.contains(Styles.selected)) return
+
+		fatherContainer.forEach((el) => {
+			el.classList.remove(Styles.selected)
+		})
+
+		item.classList.add(Styles.selected)
 	}
 
 	return (
-		<li onClick={handleClick} className={`${Styles.container} ${selected}`}>
+		<li onClick={handleClick} className={Styles.container}>
 			<Link href={links === 'home' ? '/' : links} passHref>
 				<a className={Styles.item}>
 					<span className={Styles.icons}>{icons}</span>
-					<span className={`${Styles.names}  ${sidenavName}`}>{names}</span>
+					<span className={Styles.names}>{names}</span>
 				</a>
 			</Link>
 		</li>
