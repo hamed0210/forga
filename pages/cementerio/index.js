@@ -1,23 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Styles from './cementerio.module.css'
 import { menuTabCementerio, menuTabDeafault } from '../../components/SVGIcons'
 import MenuTab from '../../components/Menu_tab/Menu_tab'
 
 const Cementery = () => {
+	const [barWidth, setbarWidth] = useState(0)
+	const [barLeft, setbarLeft] = useState(0)
+
+	const handleBar = (e) => {
+		const width = e[0],
+			x = e[1]
+		console.log(x)
+		setbarWidth(width)
+		setbarLeft(x)
+	}
+
 	return (
 		<div className={Styles.container}>
-			<div className={Styles.tab_container}>
-				{menuTabCementerio.map(({ icon, name }) => {
-					return <MenuTab key={name} icons={icon} names={name} />
-				})}
-			</div>
-			<div className={Styles.tab_container}>
-				{menuTabDeafault.map(({ name }) => {
-					return <MenuTab key={name} names={name} />
-				})}
-			</div>
-			{/* <DefaultMenuTab /> */}
+			<MenuTab data={menuTabCementerio} />
+			<MenuTab data={menuTabDeafault} />
 			Cementerio
 		</div>
 	)

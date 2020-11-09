@@ -11,7 +11,6 @@ const Sidenav_item = ({ icons, names }) => {
 
 	const handleClick = (e) => {
 		// const item = e.target.parentNode.classList[0]
-		// console.log(item)
 		if (selected === 'sidenav_selected') return
 
 		if (selected === 'sidenav_not_selected') {

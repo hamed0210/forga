@@ -6,7 +6,6 @@ import Header from '../components/Header/Header'
 import Sidenav from '../components/Sidenav/Sidenav'
 import Main from '../components/Main/Main'
 import '../components/AnimatedCSS/Sidenav.animated.css'
-import '../components/AnimatedCSS/MenuTab.animated.css'
 
 function MyApp({ Component, pageProps }) {
 	return (

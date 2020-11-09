@@ -1,4 +1,4 @@
-/* .container {
+.container {
 	position: relative;
 	display: flex;
 	height: 25px;
@@ -15,12 +15,19 @@
 	height: 1px;
 	background-color: var(--color-primary);
 	opacity: 0.3;
-} */
+}
 
 .item {
 	display: flex;
 	margin-right: 20px;
+	text-decoration: none;
+	opacity: 0.3;
 	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.item:hover {
+	opacity: 0.9;
 }
 
 .icon,
@@ -42,10 +49,29 @@
 
 .name {
 	font-size: 14px;
+}
+
+.name,
+.name_default {
 	color: var(--color-primary);
 }
 
 .name_default {
 	font-size: 13px;
-	color: var(--color-primary);
+	pointer-events: none;
+}
+
+.bar {
+	content: '';
+	position: absolute;
+	height: 3px;
+	left: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: var(--color-primary);
+	transition: all 0.5s ease;
+}
+
+.selected {
+	opacity: 0.9;
 }
