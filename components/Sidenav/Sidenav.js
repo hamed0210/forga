@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Styles from './Sidenav.module.css'
 import SidenavItem from './Sidenav_Item/Sidenav_item'
-import { sidenavIcons } from '../SVGIcons'
+import { dataForSidenav } from '../DataForComponents'
 
 const sidenav = () => {
 	const [selectedTop, setselectedTop] = useState(0)
@@ -17,7 +17,7 @@ const sidenav = () => {
 				<div className={Styles.sidenav}>
 					<span className={Styles.icons}></span>
 					<ul className={Styles.menu}>
-						{sidenavIcons.map(({ icon, name }) => {
+						{dataForSidenav.map(({ icon, name }) => {
 							return (
 								<SidenavItem
 									key={name}

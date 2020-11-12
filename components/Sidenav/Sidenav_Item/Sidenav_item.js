@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import Styles from './Sidenav_item.module.css'
 
 const Sidenav_item = ({ icons, names, selected }) => {
 	const links = names.toLowerCase()
+
+	useEffect(() => {
+		const items = document.querySelectorAll(`.${Styles.container}`)
+		items.item(0).classList.add(Styles.selected)
+	}, [])
 
 	const handleClick = (e) => {
 		const item = e.target.parentNode,

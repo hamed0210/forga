@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import Styles from './Menu_tab.module.css'
 
-const MenuTab = ({ data }) => {
+const MenuTab = ({ data, handleProps }) => {
 	const [barWidth, setbarWidth] = useState(0)
 	const [barLeft, setbarLeft] = useState(0)
 	const { pathname } = useRouter()
@@ -47,6 +47,8 @@ const MenuTab = ({ data }) => {
 
 		setbarWidth(coords.width + 20)
 		setbarLeft(coords.x - 240)
+
+		handleProps(tab.lastChild.innerHTML)
 
 		if (tab.classList.contains(Styles.selected)) return
 		fatherContainer.childNodes.forEach((el) => {

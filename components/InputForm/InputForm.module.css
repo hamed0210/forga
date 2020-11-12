@@ -1,0 +1,50 @@
+.fieldset {
+	display: flex;
+	width: 350px;
+	padding: 25px 15px 20px;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--background-secundary);
+}
+
+.legend {
+	padding: 0 10px;
+	color: var(--color-primary);
+	border-radius: 5px;
+	background-color: var(--background-primary);
+}
+
+.inputGroup_container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.inputGroup {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.label {
+	width: 40%;
+}
+
+.input {
+	width: 60%;
+	padding: 5px 0 5px 10px;
+	border: none;
+	border-radius: 5px;
+	color: var(--color-primary);
+	background-color: var(--background-primary);
+}
+
+.input:focus {
+	outline-color: var(--color-primary);
+}
+
+.input::placeholder {
+	color: var(--color-primary);
+	opacity: 0.6;
+}
