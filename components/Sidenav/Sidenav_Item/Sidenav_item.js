@@ -1,15 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import Styles from './Sidenav_item.module.css'
 
 const Sidenav_item = ({ icons, names, selected }) => {
 	const links = names.toLowerCase()
+	const { pathname } = useRouter()
 
 	useEffect(() => {
 		const items = document.querySelectorAll(`.${Styles.container}`)
-		items.item(0).classList.add(Styles.selected)
-	}, [])
+
+		if (pathname == '/') {
+			items.item(0).classList.add(Styles.selected)
+			selected(items.item(0).getBoundingClientRect())
+			return
+		}
+		if (pathname == '/cementerio') {
+			items.item(1).classList.add(Styles.selected)
+			selected(items.item(1).getBoundingClientRect())
+			return
+		}
+		if (pathname == '/usuarios') {
+			items.item(2).classList.add(Styles.selected)
+			selected(items.item(2).getBoundingClientRect())
+			return
+		}
+	}, [pathname])
 
 	const handleClick = (e) => {
 		const item = e.target.parentNode,
