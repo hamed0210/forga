@@ -6,6 +6,8 @@ class MyDocument extends Document {
 			<Html>
 				<Head>
 					<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+					<link rel='stylesheet' href='/all.css' />
+					<script defer src='/all.js'></script>
 				</Head>
 				<body>
 					<Main />

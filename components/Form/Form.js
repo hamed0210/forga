@@ -3,12 +3,10 @@ import React from 'react'
 import Styles from './Form.module.css'
 import InputForm from '../InputForm/InputForm'
 
-const Form = () => {
+const Form = ({ children }) => {
 	return (
 		<form className={Styles.form} action=''>
-			<div className={Styles.form_group}>
-				<InputForm />
-			</div>
+			<div className={Styles.form_group}>{children}</div>
 			<span className={Styles.separator}></span>
 			<button className={`btn btn_success ${Styles.btn}`} type='submit'>
 				Enviar

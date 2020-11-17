@@ -2,6 +2,7 @@
 	display: flex;
 	width: 350px;
 	padding: 25px 15px 20px;
+	margin: 0 5px;
 	border: none;
 	border-radius: 5px;
 	background-color: var(--background-secundary);
@@ -47,4 +48,8 @@
 .input::placeholder {
 	color: var(--color-primary);
 	opacity: 0.6;
+}
+
+.input[type='date']::-webkit-calendar-picker-indicator {
+	cursor: pointer;
 }
