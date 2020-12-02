@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 
-import MenuTab from '../Menu_tab/Menu_tab'
+import MenuTab from '../MenuTab/MenuTabDefault'
 import {
 	menuTabDefault,
 	dataForSolicitantes,
 	dataForFallecidos,
 	dataForExhumaciones,
+	dataForExhumacionesConsult,
 } from '../DataForComponents'
 import Form from '../Form/Form'
 import InputForm from '../InputForm/InputForm'
+import Consultas from '../Consults/Consults'
 
 const Exhumaciones = () => {
 	const [components, setComponents] = useState('Nuevos')
@@ -26,7 +28,8 @@ const Exhumaciones = () => {
 					<InputForm data={dataForExhumaciones} />
 				</Form>
 			)
-		if (components == 'Consultas') return 'Consultas'
+		if (components == 'Consultas')
+			return <Consultas header={dataForExhumacionesConsult} />
 	}
 
 	return (

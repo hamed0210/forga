@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Styles from './cementerio.module.css'
 import { menuTabCementerio } from '../../components/DataForComponents'
-import MenuTab from '../../components/Menu_tab/Menu_tab'
+import MenuTab from '../../components/MenuTab/MenuTabDinamic/MenuTabDinamic'
 import Inhumaciones from '../../components/Inhumaciones/Inhumaciones'
 import Exhumaciones from '../../components/Exhumaciones/Exhumaciones'
 import Bovedas from '../../components/Bovedas/Bovedas'

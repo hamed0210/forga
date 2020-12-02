@@ -1,0 +1,60 @@
+.login,
+.form,
+.logo_group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login {
+	height: 100vh;
+	justify-content: center;
+}
+
+.logo {
+	width: 90px;
+	margin-bottom: 20px;
+}
+
+.forga {
+	width: 120px;
+}
+
+.inputGroup_container {
+	width: 100%;
+	padding: 20px;
+	margin: 60px 0 40px;
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+
+.inputGroup {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.label {
+	width: 40%;
+	font-weight: 500;
+	color: #462b45;
+}
+
+.input {
+	width: 60%;
+	padding: 5px 0 5px 10px;
+	border: none;
+	border-radius: 5px;
+	color: var(--color-primary);
+	background-color: #f4f4f4;
+}
+
+.input:focus {
+	outline-color: #462b45;
+}
+
+.input::placeholder {
+	color: #462b45;
+	opacity: 0.6;
+}

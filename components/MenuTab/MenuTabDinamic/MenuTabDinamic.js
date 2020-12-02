@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
 
-import Styles from './Menu_tab.module.css'
+import Styles from './MenuTabDinamic.module.css'
 
 const MenuTab = ({ data, handleProps }) => {
 	const [barWidth, setbarWidth] = useState(0)
 	const [barLeft, setbarLeft] = useState(0)
-	const { pathname } = useRouter()
 
 	useEffect(() => {
 		const contents = document.querySelectorAll(`.${Styles.bar}`)
@@ -51,8 +49,9 @@ const MenuTab = ({ data, handleProps }) => {
 		handleProps(tab.lastChild.innerHTML)
 
 		if (tab.classList.contains(Styles.selected)) return
+
 		fatherContainer.childNodes.forEach((el) => {
-			if (el.nodeName == 'A') el.classList.remove(Styles.selected)
+			if (el.localName === 'a') el.classList.remove(Styles.selected)
 		})
 		tab.classList.add(Styles.selected)
 	}

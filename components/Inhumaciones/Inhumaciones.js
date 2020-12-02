@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
 import Styles from './Inhumaciones.module.css'
-import MenuTab from '../Menu_tab/Menu_tab'
+import MenuTab from '../MenuTab/MenuTabDefault'
 import {
 	menuTabDefault,
 	dataForInhumaciones,
+	dataForInhumacionesConsult,
 	dataForSolicitantes,
 	dataForFallecidos,
 } from '../DataForComponents'
@@ -30,7 +31,8 @@ const Inhumaciones = () => {
 					</div>
 				</Form>
 			)
-		if (components == 'Consultas') return <Consultas />
+		if (components == 'Consultas')
+			return <Consultas header={dataForInhumacionesConsult} />
 	}
 
 	return (

@@ -30,6 +30,7 @@
 
 .label {
 	width: 40%;
+	color: var(--color-label);
 }
 
 .input {

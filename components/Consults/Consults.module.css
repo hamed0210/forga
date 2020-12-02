@@ -90,6 +90,7 @@
 .header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	/* min-width: 100vw; */
 	margin-bottom: 5px;
 	padding: 0 10px;

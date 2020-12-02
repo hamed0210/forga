@@ -1,4 +1,5 @@
 import App from 'next/app'
+import { useRouter } from 'next/router'
 
 import '../reset.css'
 import '../global.css'
@@ -7,15 +8,21 @@ import Sidenav from '../components/Sidenav/Sidenav'
 import Main from '../components/Main/Main'
 
 function MyApp({ Component, pageProps }) {
+	const { pathname } = useRouter()
+
 	return (
 		<div className='App'>
-			<Header />
-			<section className='content_app'>
-				<Sidenav />
-				<Main>
-					<Component {...pageProps} />
-				</Main>
-			</section>
+			{pathname === '/login' ? (
+				<Component {...pageProps} />
+			) : (
+				<section className='content_app'>
+					<Header />
+					<Sidenav />
+					<Main>
+						<Component {...pageProps} />
+					</Main>
+				</section>
+			)}
 		</div>
 	)
 }
