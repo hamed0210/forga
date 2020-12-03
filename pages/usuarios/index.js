@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-import MenuTab from '../../components/MenuTab/MenuTabDefault'
-import Form from '../../components/Form/Form'
-import InputForm from '../../components/InputForm/InputForm'
-import Consultas from '../../components/Consults/Consults'
+import MenuTab from 'components/MenuTab/MenuTabDefault'
+import Form from 'components/Form/Form'
+import InputForm from 'components/InputForm/InputForm'
+import Consultas from 'components/Consults/Consults'
 import {
 	menuTabDefault,
 	dataForUsuarios,
 	dataForUsuariosConsult,
-} from '../../components/DataForComponents'
+} from 'components/DataForComponents'
 
 const Usuarios = () => {
 	const [components, setComponents] = useState('Nuevos')

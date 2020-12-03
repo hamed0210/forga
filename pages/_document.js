@@ -5,7 +5,6 @@ class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<title>Forga</title>
 					<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
 					<link rel='stylesheet' href='/all.css' />
 					<link

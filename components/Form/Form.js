@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Styles from './Form.module.css'
-import InputForm from '../InputForm/InputForm'
 
 const Form = ({ children }) => {
 	return (
